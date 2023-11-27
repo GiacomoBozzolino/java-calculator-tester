@@ -30,30 +30,31 @@ public class CalculatorTest {
 	  @Test
 	    public void testAddition() {
 	        float result = c.add(num1, num2);
-	        assertEquals(10, result, 0);
+	        assertEquals(10, result, 0, "errore di calcolo nell'addizione");
 	    }
 	  
 	  @Test
 	    public void testSubtraction() {
 	        float result = c.subtract(num1, num2);
-	        assertEquals(0, result, 0);
+	        assertEquals(0, result, 0, "errore di calcolo nella sottrazione");
 	    }
 	  
 	  @Test
 	    public void testDivision() throws Exception {
 	       
 	        float result = c.divide(num1, num2);
-	        assertEquals(1, result, 0);
+	        assertEquals(1, result, 0, "errore di calcolo nella divisione");
 
 	        // Test division by zero
-	        assertThrows(Exception.class, () -> c.divide(5, 0));
+	        assertThrows(Exception.class, () -> c.divide(num1, 0), "non è pissibile dividere per zero");
 	    }
+	 
 	  
 	  @Test
 	    public void testMultiplication() {
-	        Calculator calculator = new Calculator();
-	        float result = calculator.multiply(num1, num2);
-	        assertEquals(25, result, 0);
+	       
+	        float result = c.multiply(num1, num2);
+	        assertEquals(25, result, 0,"errore di calcolo nella moltiplicazione" );
 	    }
 	  
 	  @AfterEach
