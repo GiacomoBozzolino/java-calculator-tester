@@ -22,4 +22,9 @@ public class Calculator {
         return num1 * num2;
     }
 
+	public float multiply() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
